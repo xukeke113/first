@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table</title>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+
+  <table id="scoreTable">
+    <tr>
+      <th>Math</th>
+      <th>English</th>
+      <th>Programming</th>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>60</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>86</td>
+      <td>98</td>
+    </tr>
+  </table>
+
+  <div class="controls">
+    <h4>Change The Table Width</h4>
+    <button onclick="changeWidth(200)">200px</button>
+    <button onclick="changeWidth(500)">500px</button>
+  </div>
+
+  <div class="controls">
+    <h4>Change The Border and the Spacing Width</h4>
+    <button onclick="changeBorder(1)">1px</button>
+    <button onclick="changeBorder(10)">10px</button>
+    <button onclick="changeBorder(20)">20px</button>
+  </div>
+
+  <div class="controls">
+    <h4>Change The Table Color</h4>
+    <span class="color-btn" style="background-color: #d0e9d0;" onclick="changeColor('#d0e9d0')"></span>
+    <span class="color-btn" style="background-color: #cbe3ed;" onclick="changeColor('#cbe3ed')"></span>
+    <span class="color-btn" style="background-color: #e2d2eb;" onclick="changeColor('#e2d2eb')"></span>
+    <span class="color-btn" style="background-color: #ecd6b8;" onclick="changeColor('#ecd6b8')"></span>
+  </div>
+
+  <div class="controls">
+    <button onclick="resetTable()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

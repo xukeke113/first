@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to 許兆雲 webpage</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <ul id="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="image.html">Gallery</a></li>
+    <li><a href="table.html">Schedule</a></li>
+    <li><a class="active" href="canvas.html">Poster</a></li>
+  </ul>
+<div class="wrapper">
+
+</div>
+
+<h1>Switzerland Night View Poster</h1>
+
+<canvas id="swissCanvas" width="600" height="400"></canvas>
+
+<script>
+const c = document.getElementById("swissCanvas");
+const ctx = c.getContext("2d");
+
+ctx.fillStyle = "#0c1a33";
+ctx.fillRect(0, 0, 600, 400);
+
+for (let i = 0; i < 120; i++) {
+  ctx.fillStyle = "white";
+  let x = Math.random() * 600;
+  let y = Math.random() * 200;
+  ctx.fillRect(x, y, 2, 2);
+}
+
+ctx.beginPath();
+ctx.arc(500, 80, 25, 0, Math.PI * 2);
+ctx.fillStyle = "#fff5cc";
+ctx.fill();
+ctx.fillStyle = "#0c1a33";
+ctx.beginPath();
+ctx.arc(510, 80, 25, 0, Math.PI * 2);
+ctx.fill();
+
+ctx.fillStyle = "#243b57";
+ctx.beginPath();
+ctx.moveTo(100, 250);
+ctx.lineTo(250, 120);
+ctx.lineTo(400, 250);
+ctx.fill();
+
+ctx.fillStyle = "#1a2b44";
+ctx.beginPath();
+ctx.moveTo(250, 120);
+ctx.lineTo(350, 200);
+ctx.lineTo(150, 200);
+ctx.fill();
+
+ctx.fillStyle = "#1e3d1a";
+ctx.fillRect(0, 250, 600, 150);
+
+function drawFlower(x, y) {
+  ctx.fillStyle = "#ffe8a3";
+  ctx.beginPath();
+  ctx.arc(x, y, 4, 0, Math.PI * 2);
+  ctx.fill();
+}
+drawFlower(80, 330);
+drawFlower(160, 360);
+drawFlower(350, 340);
+drawFlower(500, 370);
+
+ctx.fillStyle = "#462a1f";
+ctx.fillRect(120, 260, 80, 60);
+ctx.fillStyle = "#2e1c15";
+ctx.beginPath();
+ctx.moveTo(110, 260);
+ctx.lineTo(160, 220);
+ctx.lineTo(210, 260);
+ctx.fill();
+
+ctx.fillStyle = "#a58d6f";
+ctx.fillRect(430, 230, 60, 120);
+
+ctx.fillStyle = "#3c2a1a";
+ctx.beginPath();
+ctx.moveTo(420, 230);
+ctx.lineTo(460, 180);
+ctx.lineTo(500, 230);
+ctx.fill();
+
+ctx.fillStyle = "#fffbe6";
+ctx.beginPath();
+ctx.arc(460, 260, 18, 0, Math.PI * 2);
+ctx.fill();
+ctx.strokeStyle = "black";
+ctx.lineWidth = 2;
+ctx.beginPath();
+ctx.moveTo(460, 260);
+ctx.lineTo(460, 245);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(460, 260);
+ctx.lineTo(475, 260);
+ctx.stroke();
+
+ctx.fillStyle = "#b30000";
+ctx.fillRect(50, 310, 350, 40);
+
+ctx.fillStyle = "#e6e6e6";
+for (let x = 65; x < 370; x += 50) {
+  ctx.fillRect(x, 320, 30, 20);
+}
+</script>
+
+</body>
+</html>

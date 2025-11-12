@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <pre id="output"></pre>
+
+  <script>
+    let result = "";
+    
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 2; j <= 9; j++) {
+        result += `${i}*${j}=${i * j}\t`;  
+      }
+      result += '\n'; 
+    }
+    
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>

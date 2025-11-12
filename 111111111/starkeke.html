@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moonlight City</title>
+</head>
+<body>
+
+<canvas id="city" width="600" height="350" style="border:1px solid black;"></canvas>
+
+<script>
+const c = document.getElementById("city");
+const ctx = c.getContext("2d");
+
+// Sky background
+const sky = ctx.createLinearGradient(0, 0, 0, c.height);
+sky.addColorStop(0, "#5C3E94"); // 上方深蓝
+sky.addColorStop(1, "#031024"); // 下方更深
+ctx.fillStyle = sky;
+ctx.fillRect(0, 0, c.width, c.height);
+
+
+ctx.fillStyle = "black";
+ctx.fillRect(0, 300, c.width, 50);
+
+
+ctx.beginPath();
+ctx.arc(500, 80, 35, 0, Math.PI * 2);
+ctx.fillStyle = "#fff8c9"; 
+ctx.fill();
+
+
+ctx.beginPath();
+ctx.arc(508, 74, 35, 0, Math.PI * 2); 
+ctx.fillStyle = "#CBCBCB"; 
+ctx.fill();
+
+ctx.fillStyle = "#425a70";
+ctx.fillRect(50, 180, 80, 120);   
+
+ctx.fillStyle = "#3a4f63";
+ctx.fillRect(150, 150, 60, 150);  
+
+ctx.fillStyle = "#4d6a82";
+ctx.fillRect(230, 200, 65, 100);
+
+ctx.fillStyle = "#3e5566";
+ctx.fillRect(310, 160, 90, 140);  
+
+ctx.fillStyle = "#597a92";
+ctx.fillRect(420, 190, 70, 110);  
+
+ctx.fillStyle = "#ffe98a";
+ctx.fillRect(70, 200, 15, 20);
+ctx.fillRect(100, 230, 15, 20);
+
+ctx.fillRect(165, 170, 15, 20);
+ctx.fillRect(185, 200, 15, 20);
+
+ctx.fillRect(330, 180, 15, 20);
+ctx.fillRect(355, 210, 15, 20);
+ctx.fillRect(380, 240, 15, 20);
+
+function star(x, y) {
+  ctx.beginPath();
+  ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
+  ctx.fill();
+}
+
+star(60, 50);
+star(120, 90);
+star(200, 60);
+star(350, 40);
+star(450, 100);
+star(520, 30);
+
+ctx.fillStyle = "white";
+ctx.font = "18px Arial";
+ctx.fillText("MOONLIGHT CITY", 0, 40);
+
+ctx.font = "14px Arial";
+ctx.fillText("Canvas 2D • City skyline", 0, 60);
+
+</script>
+
+</body>
+</html>

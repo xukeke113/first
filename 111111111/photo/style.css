@@ -1,0 +1,65 @@
+body {
+  background-color: #7a7a7a;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.gallery-container {
+  text-align: center;
+  color: #222;
+}
+
+h1 {
+  color: black;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #999;
+}
+
+.photo-frame {
+  background-color: white;
+  padding: 15px 15px 40px 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.photo-frame img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;  /* 保持比例填滿，不變形 */
+  border-radius: 6px;
+  display: block;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  background-color: #3b3b3b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#counter {
+  color: white;
+  font-size: 16px;
+}

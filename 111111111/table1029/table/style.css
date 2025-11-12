@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+table {
+  border: 2px solid #555;
+  border-collapse: separate;     
+  border-spacing: 2px;          
+  background-color: #ffffb3;     
+  width: 350px;
+  text-align: center;
+}
+
+th {
+  background-color: #007b8a;
+  color: white;
+  padding: 8px;
+  border: 1px solid #555;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #555;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.color-btn {
+  width: 40px;
+  height: 25px;
+  border: 1px solid #999;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 15px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.img1 {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+.img2{
+    border-radius:50%;
+}
+
+.img2:hover{
+    -webkit-filter: blur(5px);
+    filter:blur(5px);
+    transition: ease 3s;
+}
+</style>
+</head>
+<body>
+
+<p>Convert the image to grayscale:</p>
+
+<img src="https://jooinn.com/images/portrait-of-a-beautiful-woman.jpg" alt="Pineapple" width="300" height="300" class="img1">
+<br>
+<img src="https://jooinn.com/images/portrait-of-a-beautiful-woman.jpg" alt="Pineapple" width="300" height="300" class="img2">
+<p><strong>Note:</strong> The filter property is not supported in Internet Explorer, Edge 12, or Safari 5.1 and earlier.</p>
+
+</body>
+</html>

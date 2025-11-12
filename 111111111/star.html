@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Moonlight City</title>
+</head>
+<body>
+
+<canvas id="city" width="600" height="350" style="border:1px solid black;"></canvas>
+
+<script>
+const c = document.getElementById("city");
+const ctx = c.getContext("2d");
+
+/* 1. Sky background (linear gradient) */
+const sky = ctx.createLinearGradient(0, 0, 0, c.height);
+sky.addColorStop(0, "#0b1b44");   // Dark blue
+sky.addColorStop(1, "#031024");   // Deeper navy
+ctx.fillStyle = sky;
+ctx.fillRect(0, 0, c.width, c.height);
+
+/* 2. Ground area */
+ctx.fillStyle = "#0a0e19";
+ctx.fillRect(0, 300, c.width, 50);
+
+/* 3. Moon (crescent) */
+ctx.beginPath();
+ctx.arc(500, 80, 35, 0, Math.PI * 2);
+ctx.fillStyle = "#fff7a4";
+ctx.fill();
+
+// overlapping circle to create crescent shape
+ctx.beginPath();
+ctx.arc(515, 80, 35, 0, Math.PI * 2);
+ctx.fillStyle = sky;
+ctx.fill();
+
+/* 4. Buildings */
+ctx.fillStyle = "#425a70";
+ctx.fillRect(50, 180, 80, 120);   // Building 1
+
+ctx.fillStyle = "#3a4f63";
+ctx.fillRect(150, 150, 60, 150);  // Building 2
+
+ctx.fillStyle = "#4d6a82";
+ctx.fillRect(230, 200, 65, 100);  // Building 3
+
+ctx.fillStyle = "#3e5566";
+ctx.fillRect(310, 160, 90, 140);  // Building 4
+
+ctx.fillStyle = "#597a92";
+ctx.fillRect(420, 190, 70, 110);  // Building 5
+
+/* Optional: Roof on building 3 */
+ctx.beginPath();
+ctx.moveTo(230, 200);
+ctx.lineTo(262, 170);
+ctx.lineTo(295, 200);
+ctx.fillStyle = "#2e3c47";
+ctx.fill();
+
+/* 5. Windows (no loop — place manually) */
+ctx.fillStyle = "#ffe98a";
+ctx.fillRect(70, 200, 15, 20);
+ctx.fillRect(100, 230, 15, 20);
+
+ctx.fillRect(165, 170, 15, 20);
+ctx.fillRect(185, 200, 15, 20);
+
+ctx.fillRect(330, 180, 15, 20);
+ctx.fillRect(355, 210, 15, 20);
+ctx.fillRect(380, 240, 15, 20);
+
+/* 6. Stars (small white circles, placed manually) */
+function star(x, y) {
+  ctx.beginPath();
+  ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
+  ctx.fill();
+}
+
+star(60, 50);
+star(120, 90);
+star(200, 60);
+star(350, 40);
+star(450, 100);
+star(520, 30);
+
+/* 7. Title text */
+ctx.fillStyle = "white";
+ctx.font = "28px Arial";
+ctx.fillText("MOONLIGHT CITY", 180, 40);
+
+ctx.font = "14px Arial";
+ctx.fillText("Canvas 2D • City skyline", 230, 60);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Slider</title>
+  <style>
+    body { display: flex; flex-direction: column; align-items: center; font-family: Arial; }
+    img { width: 400px; height: 250px; object-fit: cover; border: 5px solid white; }
+    .controls { margin-top: 10px; background: #ccc; padding: 10px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+    button { margin: 0 10px; padding: 8px 16px; }
+    .image-container { background:#ccc; padding:20px; border-radius:10px; }
+</style>
+</head>
+<body>
+  <div class="image-container"><img id="slider" src="image1.jpg" /></div>
+  <div class="controls">
+    <button onclick="prev()">Prev</button>
+    <p id="counter">Image 1 of 5</p>
+    <button onclick="next()">Next</button>
+  </div>
+
+  <div class="controls">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+  </div>
+
+  <script>
+    const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
+    let index = 0;
+
+    function update() {
+      document.getElementById("slider").src = images[index];
+      document.getElementById("counter").innerText = `Image ${index+1} of ${images.length}`;
+    }
+
+    function prev() {
+      index = (index - 1 + images.length) % images.length;
+      update();
+    }
+
+    function next() {
+      index = (index + 1) % images.length;
+      update();
+    }
+  </script>
+</body>
+</html>

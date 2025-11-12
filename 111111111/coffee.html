@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+  border-radius: 50%;
+  background-color: #b3d9ff; /* Rounded color background */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: transparent;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.container:hover #img1{
+  opacity: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Fade in Overlay</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png" alt="Avatar" class="image" id="img1" >
+
+  <div class="overlay">
+    <img src="https://png.pngtree.com/png-vector/20241123/ourmid/pngtree-adorable-golden-cat-clipart-standing-illustration-png-image_14489824.png" alt="Avatar" class="image" usemap="#workmap">
+    
+  </div>
+</div>
+<map name="workmap">
+    <area shape ="circle" coords="162,89,50" href="https://www.typingtest.com/">
+</map>
+
+</body>
+</html>

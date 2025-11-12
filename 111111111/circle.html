@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circle Example</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="600" height="300" style="border:1px solid black;"></canvas>
+
+<script>
+  const c = document.getElementById("myCanvas");
+  const ctx = c.getContext("2d");
+
+  // Outer circle
+  ctx.beginPath();
+  ctx.arc(150, 150, 70, 0, Math.PI * 2);
+  ctx.fillStyle = "#2e7d32";
+  ctx.fill();
+
+ 
+  const grad = ctx.createLinearGradient(90, 150, 210, 150); 
+  // 210 → 右边, 90 → 左边
+  grad.addColorStop(0, "#388e3c");   // 左边淡
+  grad.addColorStop(1, "#d4e157");   // 右边深
+
+  ctx.beginPath();
+  ctx.arc(150, 150, 60, 0, Math.PI * 2);
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+ 
+  ctx.fillStyle = "white";
+  ctx.font = "30px Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("Hi", 180, 140);
+</script>
+
+</body>
+</html>
