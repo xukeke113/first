@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to 許兆雲 webpage</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+<ul id="nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="About.html">About</a></li>
+  <li><a href="image.html">Gallery</a></li>
+  <li><a class="active" href="table.html">Schedule</a></li>
+  <li><a href="canvas.html">Poster</a></li>
+</ul>
+<div class="wrapper">
+  
+<h3 style="margin-top: 20px; color:#1A2A4F;">Swiss City Comparison</h3>
+  <p style="max-width:800px; line-height:1.6; text-align:justify; margin-bottom:20px;">
+    Below is a comparison of several well-known Swiss cities, highlighting their famous features and recommended travel activities.
+  </p>
+
+  <table id="scoreTable">
+    <tr>
+      <th>City</th>
+      <th>Main Feature</th>
+      <th>Recommended Activity</th>
+    </tr>
+    <tr>
+      <td>Zurich</td>
+      <td>Modern city with lakeside scenery</td>
+      <td>Walk around Lake Zurich & Old Town</td>
+    </tr>
+    <tr>
+      <td>Lucerne</td>
+      <td>Beautiful lake & mountain views</td>
+      <td>Take the cable car to Mount Pilatus</td>
+    </tr>
+    <tr>
+      <td>Interlaken</td>
+      <td>Adventure capital of Switzerland</td>
+      <td>Paragliding & Jungfrau Railway Trip</td>
+    </tr>
+  </table>
+
+  <div class="controls">
+    <h4>Change The Table Width</h4>
+    <button onclick="changeWidth(300)">300px</button>
+    <button onclick="changeWidth(600)">600px</button>
+  </div>
+
+  <div class="controls">
+    <h4>Change The Border and the Spacing Width</h4>
+    <button onclick="changeBorder(1)">1px</button>
+    <button onclick="changeBorder(10)">10px</button>
+    <button onclick="changeBorder(20)">20px</button>
+  </div>
+
+  <div class="controls">
+    <h4>Change The Table Color</h4>
+    <span class="color-btn" style="background-color: #d0e9d0;" onclick="changeColor('#d0e9d0')"></span>
+    <span class="color-btn" style="background-color: #cbe3ed;" onclick="changeColor('#cbe3ed')"></span>
+    <span class="color-btn" style="background-color: #e2d2eb;" onclick="changeColor('#e2d2eb')"></span>
+    <span class="color-btn" style="background-color: #ecd6b8;" onclick="changeColor('#ecd6b8')"></span>
+  </div>
+
+  <div class="controls">
+    <button onclick="resetTable()">Reset</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
